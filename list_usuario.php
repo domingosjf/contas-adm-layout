@@ -66,7 +66,7 @@ include_once("conexao.php");
 					
 					<ul id="submenu1" class="list-unstyled collapse">
                             <li><a href="list_usuario.php"><i class="fas fa-users"></i> Usuários</a></li>
-                            <li><a href="#"><i class="fas fa-key"></i> Nível de Acesso</a></li>
+                            <li><a href="list_niv_acesso.php"><i class="fas fa-key"></i> Nível de Acesso</a></li>
                     </ul>
 					
 					
@@ -119,7 +119,9 @@ $resultado_usuario = mysqli_query($conn, $result_usuario);
 				<div class="list-group-item">
 				    <div class="d-flex">
 					  <div class="mr-auto p-2">
-					   <h2 class="display-4 titulo">Lista De Usuários</h2> 
+					   <h1 class="display-4 titulo">Lista De Usuários</h1> 
+					   
+					   
 					  </div>
 					</div>
             <div class="row mb-3">
@@ -143,7 +145,7 @@ while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
 
 ?>
 
-<tr class="table-info">
+<tr class="table-primary">
 <td><?php echo $row_usuario['id']; ?></td>
 <td><?php echo $row_usuario['nome']; ?></td>
 <td class="d-none d-sm-table-cell"><?php echo $row_usuario['email']; ?></td>
