@@ -56,7 +56,7 @@ include_once("conexao.php");
             <nav class="sidebar">
                 <ul class="list-unstyled">
 				
-                    <li><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="index.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
                     
 					<li>
 					
@@ -65,7 +65,7 @@ include_once("conexao.php");
                     </a>
 					
 					<ul id="submenu1" class="list-unstyled collapse">
-                            <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
+                            <li><a href="list_usuario.php"><i class="fas fa-users"></i> Usuários</a></li>
                             <li><a href="#"><i class="fas fa-key"></i> Nível de Acesso</a></li>
                     </ul>
 					
@@ -246,6 +246,26 @@ include_once("conexao.php");
                         </div>
 						<!-- 4 card -->
 						
+
+
+
+
+
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Domingos Filho Dev 2021</span></br>
+						<span>Doações em Dogecoin Serão Bem Recebidas</span></br>
+						<span>Envie Para o Endereço = DEutEhxH5FH684sXpcDyiRPdanRKdk1heF </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+
+
 						
 			<!-- div row -->
 			</div>
