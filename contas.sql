@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 15-Maio-2021 às 18:57
+-- Tempo de geração: 16-Maio-2021 às 01:32
 -- Versão do servidor: 10.4.10-MariaDB
 -- versão do PHP: 7.0.33
 
@@ -185,13 +185,13 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `situacao_id`, `niveis_acesso_id`, `qnt_acessos`, `created`, `modified`) VALUES
 (1, 'Domingos', 'domingosjff@localhost.lo', 1, 1, 15, '2017-09-23 00:00:00', NULL),
-(2, 'Kelly1', 'kelly@celke.com.br1', 1, 2, 20, '2017-09-23 00:00:00', '2017-09-23 20:13:26'),
-(3, 'Jessica2', 'jessica@celke.com.br2', 1, 3, 10, '2017-09-23 00:00:00', '2017-09-23 20:13:52'),
-(4, 'Ana', 'ana@celke.com.br', 2, 3, 15, '2017-09-23 00:00:00', NULL),
-(5, 'Carlos', 'carlos@celke.com.br', 2, 3, 0, '2017-09-23 15:48:31', NULL),
-(6, 'Cesar 1', 'cesar1@celke.com.br', 2, 3, 0, '2017-09-23 15:50:43', NULL),
-(7, 'Cesar 2', 'cesar2@celke.com.br', 2, 3, 0, '2017-09-23 15:57:35', NULL),
-(8, 'Cesar 4', 'cesar4@celke.com.br', 2, 3, 0, '2017-09-23 16:22:16', NULL);
+(2, 'Filho', 'Filho@localhost', 1, 2, 20, '2017-09-23 00:00:00', '2017-09-23 20:13:26'),
+(3, 'Filho2233', 'Filho2233@localhost', 1, 3, 10, '2017-09-23 00:00:00', '2017-09-23 20:13:52'),
+(4, 'Filho22', 'Filho22@localhost', 2, 3, 15, '2017-09-23 00:00:00', NULL),
+(5, 'Filho111', 'Filho111@localhost', 2, 3, 0, '2017-09-23 15:48:31', NULL),
+(6, 'domingos2312', '22domingosjff@localhost.lo', 2, 3, 0, '2017-09-23 15:50:43', NULL),
+(7, 'domingos2232', '22domingos@localhost.lo', 2, 3, 0, '2017-09-23 15:57:35', NULL),
+(8, 'domingos23211', '22322domingosjff@localhost.lo', 2, 3, 0, '2017-09-23 16:22:16', NULL);
 
 --
 -- Restrições para despejos de tabelas
