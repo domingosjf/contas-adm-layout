@@ -196,7 +196,7 @@ while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
                                 <tr>
                                     <th><?php echo $row_usuario['id']; ?></th>
                                     <td><?php echo $row_usuario['saida']; ?></td>
-                                    <td class="d-none d-sm-table-cell"><?php echo date('d/m/Y H:i:s', strtotime($row_usuario['created'])); ?></td>
+                                    <td><?php echo date('d/m/Y H:i:s', strtotime($row_usuario['created'])); ?></td>
 									
 									<td class="text-center">
                                         <span class="d-none d-md-block">
