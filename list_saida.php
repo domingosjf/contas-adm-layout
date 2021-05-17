@@ -3,7 +3,7 @@ session_start();
 include_once("conexao.php");
 ?>
 
-			
+
 
 
 <!DOCTYPE html>
@@ -51,6 +51,9 @@ include_once("conexao.php");
                 </ul>                
             </div>
         </nav>
+		
+		
+<!-- começo do menu -->
         
     <div class="d-flex">
             <nav class="sidebar">
@@ -72,6 +75,7 @@ include_once("conexao.php");
 					
 					</li>
                     
+					
 					</li>
                     
 					
@@ -88,7 +92,9 @@ include_once("conexao.php");
 					
 					
 					</li>
-                                        
+                    
+					
+
                    <li>
 					
 					<a href="#submenu4" data-toggle="collapse">
@@ -141,12 +147,12 @@ include_once("conexao.php");
                 </ul>
             </nav>
 				<!-- Fim do Menu -->
-  				
-				<!-- Começo Content  DASHBOARD -->
-			
-		
 
-    
+
+<!-- Começo Content  DASHBOARD -->
+
+
+   
 <?php
 
 
@@ -157,28 +163,27 @@ $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 
 
-            
-			<div class="content p-1">
-				<div class="list-group-item">
-				    <div class="d-flex">
-					  <div class="mr-auto p-2">
-					   <h1 class="display-4 titulo">Lista De Saidas</h1> 
-					   
-					   
-					  </div>
-					</div>
-            <div class="row mb-3">
-			 
-			 
-			 
-			 
-			   <table class="table table-striped table-bordered table-hover table-sm">
-				<thead class="thead-dark">
-					<th scope="col">ID</th>
-					<th scope="col">Valor</th>
-					<th scope="col">Data de Cadastro</th>
-				</thead>
-				<tbody>
+
+		
+            <div class="content p-1">
+                <div class="list-group-item">
+                    <div class="d-flex">
+                        <div class="mr-auto p-2">
+                            <h2 class="display-4 titulo">Lista De Saidas</h2>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Valor</th>
+                                    <th scope="col">Data de Cadastro</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+							
 				
 <?php
 				
@@ -187,24 +192,22 @@ while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
 
 ?>
 
-<tr class="table-primary">
-<td><?php echo $row_usuario['id']; ?></td>
-<td><?php echo $row_usuario['saida']; ?></td>
-<td class="d-none d-sm-table-cell"><?php echo date('d/m/Y H:i:s', strtotime($row_usuario['created'])); ?></td>
-
-<span class="d-none d-md-block">
-
-</tr>
-
+						
+                                <tr>
+                                    <th><?php echo $row_usuario['id']; ?></th>
+                                    <td><?php echo $row_usuario['saida']; ?></td>
+                                    <td class="d-none d-sm-table-cell"><?php echo date('d/m/Y H:i:s', strtotime($row_usuario['created'])); ?></td>
+									<td>Editar</td>
+                                </tr>
 
  <?php
     }
  ?>
-				</tbody>
-			</table>
+												
+                            </tbody>
+                        </table>
 
-
-            <!-- Footer -->
+            <!-- Começo do Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -214,26 +217,23 @@ while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
                     </div>
                 </div>
             </footer>
-            <!-- End of Footer -->
+            <!-- Fim do Footer -->
 
 
 
 
-			<!-- div row -->
-			</div>
-			<!-- group iten -->	
-				</div>
-			<!-- div content -->	
-		    </div>	
-<!-- div flex -->	
-	</div>
- 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/dashboard.js"></script>
-	</body>
+        <script src="js/dashboard.js"></script>
+    </body>
 </html>
