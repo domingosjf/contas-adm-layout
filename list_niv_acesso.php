@@ -91,8 +91,24 @@ include_once("conexao.php");
                     
 					
 					
+
+                   <li>
 					
-                    <li><a href="#"><i class="fas fa-money-check-alt"></i> Saída</a></li>
+					<a href="#submenu4" data-toggle="collapse">
+                            <i class="fas fa-money-check-alt"></i> Saida
+                    </a>
+					
+					<ul id="submenu4" class="list-unstyled collapse">
+                            <li><a href="list_saida.php"><i class="fas fa-money-check-alt"></i> Saida</a></li>
+                            
+                    </ul>
+					
+					
+					</li>
+                    
+
+
+
                     <li><a href="#"><i class="fas fa-dollar-sign"></i> Saldo</a></li>
 					
 					
