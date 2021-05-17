@@ -179,7 +179,7 @@ include_once("conexao.php");
                                     <th>Nome</th>
                                     <th class="d-none d-sm-table-cell">E-mail</th>
                                     <th class="d-none d-lg-table-cell">Data do Cadastro</th>
-                                    <th>Ações</th>
+                                    <th class="text-center">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -196,7 +196,29 @@ include_once("conexao.php");
                                     <td><?php echo $row_usuario['nome']; ?></td>
                                     <td class="d-none d-sm-table-cell"><?php echo $row_usuario['email']; ?></td>
                                     <td class="d-none d-lg-table-cell"><?php echo date('d/m/Y H:i:s', strtotime($row_usuario['created'])); ?></td>
-                                    <td>Editar</td>
+                                    <td class="text-center">
+                                        <span class="d-none d-md-block">
+										    <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Ações
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                                <a class="dropdown-item" href="visualizar.html">Visualizar</a>
+                                                <a class="dropdown-item" href="editar.html">Editar</a>
+                                                   <a class="dropdown-item" href="apagar.html" data-toggle="modal" data-target="#apagarRegistro">Apagar</a>
+                                            </div>
+                                        </div></span>
+									<div class="dropdown d-block d-md-none">
+                                            <button class="btn btn-primary dropdown-toggle btn-sm" type="button" id="acoesListar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Ações
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="acoesListar">
+                                                <a class="dropdown-item" href="visualizar.html">Visualizar</a>
+                                                <a class="dropdown-item" href="editar.html">Editar</a>
+                                                   <a class="dropdown-item" href="apagar.html" data-toggle="modal" data-target="#apagarRegistro">Apagar</a>
+												
+												</div>
+                                        </div>
+                                    </td	
                                 </tr>
 
  <?php
@@ -226,6 +248,26 @@ include_once("conexao.php");
             </div>
         </div>
 
+
+        <div class="modal fade" id="apagarRegistro" tabindex="-1" role="dialog" aria-labelledby="apagarRegistroLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title" id="exampleModalLabel">EXCLUIR ITEM</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Tem certeza de que deseja excluir o item selecionado?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger">Apagar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
