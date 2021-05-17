@@ -103,9 +103,21 @@ include_once("conexao.php");
 					
 					</li>
                     
+
+                   <li>
 					
-					<li><a href="#"><i class="fas fa-dollar-sign"></i> Saldo</a></li>
+					<a href="#submenu5" data-toggle="collapse">
+                            <i class="fas fa-dollar-sign"></i> Saldo
+                    </a>
 					
+					<ul id="submenu5" class="list-unstyled collapse">
+                            <li><a href="list_saldo.php"><i class="fas fa-dollar-sign"></i> Saldo</a></li>
+                            
+                    </ul>
+					
+					
+					</li>
+                    					
 					
 					<li class="active">
 					
