@@ -72,7 +72,26 @@ include_once("conexao.php");
 					
 					</li>
                     
-					<li><a href="#"><i class="fas fa-wallet"></i> Entrada</a></li>
+					</li>
+                    
+					
+                   <li>
+					
+					<a href="#submenu3" data-toggle="collapse">
+                            <i class="fas fa-wallet"></i> Entrada
+                    </a>
+					
+					<ul id="submenu3" class="list-unstyled collapse">
+                            <li><a href="list_entrada.php"><i class="fas fa-wallet"></i> Entrada</a></li>
+                            
+                    </ul>
+					
+					
+					</li>
+                    
+					
+					
+					
                     <li><a href="#"><i class="fas fa-money-check-alt"></i> Saída</a></li>
                     <li><a href="#"><i class="fas fa-dollar-sign"></i> Saldo</a></li>
 					
