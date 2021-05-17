@@ -124,7 +124,7 @@ include_once("conexao.php");
 					
 					
 					
-					<li class="active">
+					<li>
 					
 					<a href="#submenu2" data-toggle="collapse">
                             <i class="fas fa-bars"></i> Configurações</a></li>
@@ -132,7 +132,7 @@ include_once("conexao.php");
 					
 					<ul id="submenu2" class="list-unstyled collapse">
                             <li><a href="#"><i class="fas fa-bars"></i> Configurações</a></li>
-                            <li class="active"><a href="#"><i class="fas fa-file-alt"></i> Menu</a></li>
+                            <li><a href="#"><i class="fas fa-file-alt"></i> Menu</a></li>
 							<li><a href="#"><i class="fab fa-elementor"></i> Item de Menu</a></li>
 							<li><a href="#"><i class="fas fa-key"></i> Empresa</a></li>
                     </ul>
