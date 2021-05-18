@@ -200,7 +200,9 @@ include_once("conexao.php");
 									
 									
 									<td>
-                                    <h5><span class="badge badge-primary"><?php echo $row_usuario['nome_sit	']; ?></span></h5>
+                                    <h5><span class="badge badge-primary">
+									<?php echo $row_usuario['nome_sit']; ?>
+									</span></h5>
 									</td>
 									
 									<td><?php echo $row_usuario['nome']; ?></td>
