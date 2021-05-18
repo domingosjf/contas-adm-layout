@@ -66,12 +66,15 @@ include_once("conexao.php");
 					<a href="#submenu1" data-toggle="collapse">
                             <i class="fas fa-user"></i> Usuário
                     </a>
-					
+
 					<ul id="submenu1" class="list-unstyled collapse">
                             <li><a href="list_usuario.php"><i class="fas fa-users"></i> Usuários</a></li>
-                            <li><a href="list_niv_acesso.php"><i class="fas fa-key"></i> Nível de Acesso</a></li>
-                    </ul>
-					
+							<li><a href="list_user_bloq.php"><i class="fas fa-users"></i> Bloqueados</a></li>
+							<li><a href="list_user_lib.php"><i class="fas fa-users"></i> Liberados</a></li>
+							<li><a href="list_niv_acesso.php"><i class="fas fa-key"></i> Nível de Acesso</a></li>
+                    
+					</ul>
+										
 					
 					</li>
                     
@@ -178,7 +181,7 @@ $resultado_usuario = mysqli_query($conn, $result_usuario);
                                 <tr>
                                     <th>ID</th>
                                     <th>Valor</th>
-                                    <th scope="col">Data de Cadastro</th>
+                                    <th scope="col">Data da Saida</th>
                                     <th>Ações</th>
                                 </tr>
                             </thead>
