@@ -69,8 +69,11 @@ include_once("conexao.php");
 					
 					<ul id="submenu1" class="list-unstyled collapse">
                             <li><a href="list_usuario.php"><i class="fas fa-users"></i> Usuários</a></li>
-                            <li><a href="list_niv_acesso.php"><i class="fas fa-key"></i> Nível de Acesso</a></li>
-                    </ul>
+							<li><a href="list_user_bloq.php"><i class="fas fa-users"></i> Bloqueados</a></li>
+							<li><a href="list_user_lib.php"><i class="fas fa-users"></i> Liberados</a></li>
+							<li><a href="list_niv_acesso.php"><i class="fas fa-key"></i> Nível de Acesso</a></li>
+                    
+					</ul>
 					
 					
 					</li>
