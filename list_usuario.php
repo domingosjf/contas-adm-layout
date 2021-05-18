@@ -69,8 +69,11 @@ include_once("conexao.php");
 					
 					<ul id="submenu1" class="list-unstyled collapse">
                             <li><a href="list_usuario.php"><i class="fas fa-users"></i> Usuários</a></li>
-                            <li><a href="list_niv_acesso.php"><i class="fas fa-key"></i> Nível de Acesso</a></li>
-                    </ul>
+							<li><a href="list_user_bloq.php"><i class="fas fa-users"></i> Bloqueados</a></li>
+							<li><a href="list_user_lib.php"><i class="fas fa-users"></i> Liberados</a></li>
+							<li><a href="list_niv_acesso.php"><i class="fas fa-key"></i> Nível de Acesso</a></li>
+                    
+					</ul>
 					
 					
 					</li>
@@ -156,7 +159,7 @@ include_once("conexao.php");
 		
 	<?php
 
-	$result_usuario = "SELECT * FROM usuarios";
+	$result_usuario = "SELECT user.*, sit.nome nome_sit FROM usuarios user INNER JOIN situacaos sit ON sit.id=user.situacao_id";
 	$resultado_usuario = mysqli_query($conn, $result_usuario);
 
 	?>
@@ -168,7 +171,7 @@ include_once("conexao.php");
                 <div class="list-group-item">
                     <div class="d-flex">
                         <div class="mr-auto p-2">
-                            <h2 class="display-4 titulo">Listar Usuários</h2>
+                            <h2 class="display-4 titulo">Lista de Todos Usuários</h2>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -176,6 +179,7 @@ include_once("conexao.php");
                             <thead>
                                 <tr>
                                     <th>ID</th>
+									<th>Status</th>
                                     <th>Nome</th>
                                     <th class="d-none d-sm-table-cell">E-mail</th>
                                     <th class="d-none d-lg-table-cell">Data do Cadastro</th>
@@ -193,7 +197,13 @@ include_once("conexao.php");
 							
                                 <tr>
                                     <th><?php echo $row_usuario['id']; ?></th>
-                                    <td><?php echo $row_usuario['nome']; ?></td>
+									
+									
+									<td>
+                                    <h5><span class="badge badge-primary"><?php echo $row_usuario['nome_sit	']; ?></span></h5>
+									</td>
+									
+									<td><?php echo $row_usuario['nome']; ?></td>
                                     <td class="d-none d-sm-table-cell"><?php echo $row_usuario['email']; ?></td>
                                     <td class="d-none d-lg-table-cell"><?php echo date('d/m/Y H:i:s', strtotime($row_usuario['created'])); ?></td>
                                     <td class="text-center">
